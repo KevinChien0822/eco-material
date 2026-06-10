@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="宸廷綠色工程有限公司 - 代理茂茂峰林100%生物可分解材料">
+    <title>宸廷綠色工程有限公司 | 環保材料專賣</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:"Noto Sans TC",sans-serif;color:#333;line-height:1.8;overflow-x:hidden;background:#fff}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.section-title{font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:.5rem;color:#1a5276}
+.section-subtitle{font-size:1rem;font-weight:400;text-align:center;color:#5d8aa8;letter-spacing:3px;text-transform:uppercase;margin-bottom:.25rem}
+.section-desc{text-align:center;max-width:700px;margin:0 auto 3rem;color:#666;font-size:1.05rem}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);transition:all .3s}
+.navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 20px;height:70px}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo img{height:40px;width:auto}
+.nav-logo .brand-text{font-size:.95rem;font-weight:700;color:#1a5276;line-height:1.3}
+.nav-logo .brand-text small{font-size:.7rem;font-weight:400;color:#888;display:block}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:#444;transition:color .3s;position:relative}
+.nav-links a::after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#1a5276;transition:width .3s}
+.nav-links a:hover{color:#1a5276}
+.nav-links a:hover::after{width:100%}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+.hamburger span{width:28px;height:2.5px;background:#333;border-radius:3px;transition:all .3s}
+.hero{height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#0d3446,#1a5276,#2e7d5e,#3a9a7a);overflow:hidden}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent,rgba(0,0,0,.3))}
+.hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.particle{position:absolute;width:6px;height:6px;background:rgba(255,255,255,.12);border-radius:50%;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) scale(1);opacity:0}}
+.hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:0 20px}
+.hero-logo{width:130px;height:auto;margin:0 auto 1.5rem}
+.hero h1{font-size:3.5rem;font-weight:900;margin-bottom:.3rem;letter-spacing:2px}
+.hero .tagline{font-size:1.4rem;font-weight:300;margin-bottom:.3rem;letter-spacing:6px;opacity:.9}
+.hero .sub-tagline{font-size:1rem;font-weight:300;opacity:.8;max-width:680px;margin:0 auto 2rem;line-height:1.8}
+.hero-btn{display:inline-block;padding:14px 40px;background:#fff;color:#1a5276;font-size:1rem;font-weight:700;border-radius:50px;transition:all .3s;border:2px solid transparent}
+.hero-btn:hover{background:transparent;color:#fff;border-color:#fff;transform:translateY(-2px)}
+.scroll-indicator{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:.8rem;animation:bounce 2s infinite}
+.scroll-indicator .mouse{width:24px;height:38px;border:2px solid rgba(255,255,255,.6);border-radius:12px;position:relative}
+.scroll-indicator .mouse::after{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:3px;height:8px;background:rgba(255,255,255,.7);border-radius:2px;animation:scrollDot 2s ease-in-out infinite}
+@keyframes scrollDot{0%,100%{transform:translateX(-50%) translateY(0);opacity:1}50%{transform:translateX(-50%) translateY(10px);opacity:.3}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.about{padding:100px 0 80px;background:#f4f7fa}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(26,82,118,.12);background:linear-gradient(135deg,#d4e6f1,#a9cce3);height:450px;display:flex;align-items:center;justify-content:center}
+.about-image img{width:80%;height:auto;object-fit:contain;transition:transform .6s}
+.about-image:hover img{transform:scale(1.05)}
+.about-text h2{font-size:2rem;font-weight:700;color:#1a5276;margin-bottom:1rem}
+.about-text p{color:#555;margin-bottom:1.2rem;font-size:1rem;line-height:2}
+.about-text .highlight-box{background:#fff;border-left:4px solid #1a5276;padding:16px 20px;border-radius:0 8px 8px 0;margin:1.5rem 0;font-size:.95rem;color:#444;line-height:1.8}
+.about-text .highlight-box strong{color:#1a5276}
+.about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:2rem}
+.stat-item{text-align:center;padding:18px 12px;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.stat-item .number{font-size:1.6rem;font-weight:900;color:#1a5276}
+.stat-item .label{font-size:.78rem;color:#888;margin-top:3px}
+.services{padding:100px 0;background:#fff}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.service-card{padding:40px 30px;border-radius:16px;background:#f4f7fa;transition:all .4s;position:relative;overflow:hidden}
+.service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a5276,#2e7d5e);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(26,82,118,.12)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card .icon{font-size:2.5rem;margin-bottom:1rem;display:block}
+.service-card .number{font-size:3rem;font-weight:900;color:rgba(26,82,118,.08);position:absolute;top:15px;right:20px;line-height:1}
+.service-card h3{font-size:1.2rem;font-weight:700;color:#1a5276;margin-bottom:.8rem}
+.service-card p{color:#666;font-size:.92rem;line-height:1.8}
+.products{padding:100px 0;background:#f4f7fa}
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.product-card{background:#fff;border-radius:16px;overflow:hidden;transition:all .4s;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,82,118,.12)}
+.product-card .img-wrap{height:220px;background:#d4e6f1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-card:hover .img-wrap img{transform:scale(1.08)}
+.product-card .info{padding:20px}
+.product-card h4{font-size:1.1rem;font-weight:700;color:#1a5276;margin-bottom:.5rem}
+.product-card p{font-size:.88rem;color:#777;line-height:1.6}
+.product-placeholder{font-size:3rem;color:#88b5d6}
+.env-section{padding:100px 0;background:#fff}
+.env-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.env-card{padding:35px 30px;border-radius:16px;background:#f4f7fa;transition:all .3s}
+.env-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.env-card .env-icon{font-size:2rem;margin-bottom:.8rem}
+.env-card h3{font-size:1.2rem;font-weight:700;color:#1a5276;margin-bottom:.6rem}
+.env-card p{color:#666;font-size:.92rem;line-height:1.8}
+.certification{padding:100px 0;background:#f4f7fa}
+.cert-grid{display:flex;justify-content:center;align-items:center;gap:50px;flex-wrap:wrap}
+.cert-item{text-align:center;padding:30px 40px;background:#fff;border-radius:16px;min-width:200px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.cert-item:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.cert-item img{height:55px;width:auto;margin:0 auto 1rem}
+.cert-item h4{font-size:.95rem;color:#1a5276;font-weight:600}
+.cert-item p{font-size:.82rem;color:#999;margin-top:3px}
+.cert-note{text-align:center;max-width:700px;margin:2.5rem auto 0;padding:20px 30px;background:#fff;border-radius:12px;font-size:.9rem;color:#666;line-height:1.8;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.agent-section{padding:80px 0;background:linear-gradient(135deg,#0d3446,#1a5276);color:#fff;text-align:center}
+.agent-section h2{font-size:2rem;font-weight:700;margin-bottom:1rem}
+.agent-section p{max-width:700px;margin:0 auto 1.5rem;opacity:.9;font-size:1.05rem;line-height:2}
+.agent-section .partner{font-size:1.2rem;font-weight:500;color:#85c1e9;letter-spacing:2px;margin-bottom:.5rem}
+.contact{padding:100px 0;background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h3{font-size:1.4rem;font-weight:700;color:#1a5276;margin-bottom:1.5rem}
+.contact-info .info-item{display:flex;align-items:center;gap:12px;margin-bottom:1rem;color:#555;font-size:.95rem}
+.contact-info .icon{font-size:1.2rem;min-width:28px;text-align:center}
+.contact-info .divider{height:1px;background:#e8ecf0;margin:1.5rem 0}
+.contact-info .agent-label{font-size:.85rem;color:#1a5276;font-weight:500;margin-bottom:.5rem}
+.contact-form{background:#f4f7fa;padding:40px;border-radius:16px}
+.form-group{margin-bottom:1.2rem}
+.form-group input,.form-group textarea{width:100%;padding:14px 18px;border:1.5px solid #e0e8e0;border-radius:10px;font-family:inherit;font-size:.95rem;transition:border-color .3s;outline:none;background:#fff}
+.form-group input:focus,.form-group textarea:focus{border-color:#1a5276}
+.form-group textarea{height:120px;resize:vertical}
+.form-group .submit-btn{width:100%;padding:16px;background:#1a5276;color:#fff;font-size:1.05rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:all .3s}
+.form-group .submit-btn:hover{background:#2e7d5e;transform:translateY(-2px)}
+.footer{padding:40px 0;background:#0d2838;color:rgba(255,255,255,.7);text-align:center;font-size:.85rem}
+.footer .brand{font-weight:700;color:#fff;margin-bottom:.3rem}
+.footer a{color:#85c1e9}
+.footer a:hover{text-decoration:underline}
+.footer .small{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.5rem}
+.fade-up{opacity:0;transform:translateY(40px);transition:all .8s ease}
+.fade-up.active{opacity:1;transform:translateY(0)}
+.fade-left{opacity:0;transform:translateX(-40px);transition:all .8s ease}
+.fade-left.active{opacity:1;transform:translateX(0)}
+.fade-right{opacity:0;transform:translateX(40px);transition:all .8s ease}
+.fade-right.active{opacity:1;transform:translateX(0)}
+.delay-100{transition-delay:.1s}
+.delay-200{transition-delay:.2s}
+.delay-300{transition-delay:.3s}
+.delay-400{transition-delay:.4s}
+@media(max-width:992px){.about-grid{grid-template-columns:1fr;gap:40px}.services-grid{grid-template-columns:1fr 1fr}.products-grid{grid-template-columns:repeat(2,1fr)}.env-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:40px}.hero h1{font-size:2.8rem}.hero .tagline{font-size:1.2rem;letter-spacing:4px}}
+@media(max-width:768px){.nav-links{position:fixed;top:70px;left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);flex-direction:column;padding:20px;gap:1rem;transform:translateY(-100%);opacity:0;pointer-events:none;border-bottom:1px solid rgba(0,0,0,.06)}.nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}.hamburger{display:flex}.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}.hero h1{font-size:2.2rem}.hero .tagline{font-size:1rem;letter-spacing:3px}.services-grid{grid-template-columns:1fr}.products-grid{grid-template-columns:1fr}.about-stats{grid-template-columns:repeat(2,1fr)}.section-title{font-size:2rem}.contact-form{padding:25px}}
+@media(max-width:480px){.hero h1{font-size:1.8rem}.hero .tagline{font-size:.9rem;letter-spacing:2px}.about-stats{grid-template-columns:1fr}.cert-grid{gap:20px}}
+
+.cert-hero{padding:100px 0 60px;background:linear-gradient(135deg,#0d3446,#1a5276);color:#fff;text-align:center}
+.cert-hero h2{font-size:2.8rem;font-weight:900;margin-bottom:.5rem}
+.cert-hero p{font-size:1.1rem;opacity:.85;max-width:600px;margin:0 auto}
+.cert-badges{padding:0 0 80px;background:linear-gradient(135deg,#0d3446,#1a5276)}
+.cert-badges-inner{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;max-width:1000px;margin:0 auto;padding:0 20px}
+.cert-badge{background:#fff;border-radius:20px;padding:35px 35px;text-align:center;flex:1;min-width:220px;max-width:300px;box-shadow:0 20px 60px rgba(0,0,0,.2);transition:all .4s}
+.cert-badge:hover{transform:translateY(-8px);box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.cert-badge .badge-icon{width:75px;height:75px;margin:0 auto 1rem;background:#eef2f7;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#1a5276}
+.cert-badge h3{font-size:1.15rem;font-weight:700;color:#1a5276;margin-bottom:.5rem}
+.cert-badge .badge-sub{font-size:.8rem;color:#888;margin-bottom:.8rem}
+.cert-badge .badge-desc{font-size:.85rem;color:#555;line-height:1.7}
+.cert-badge .badge-tag{display:inline-block;margin-top:.8rem;padding:4px 14px;background:#d4e6f1;color:#1a5276;border-radius:20px;font-size:.75rem;font-weight:600}
+.cert-compare{padding:80px 0;background:#f4f7fa}
+.cert-compare h2{text-align:center;font-size:2rem;font-weight:700;color:#1a5276;margin-bottom:.5rem}
+.cert-compare .sub{text-align:center;color:#888;margin-bottom:2.5rem;font-size:.93rem}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:860px;margin:0 auto}
+.compare-card{padding:30px;border-radius:16px;transition:all .3s}
+.compare-card.fake{background:#fff;border:2px solid #f5c6cb}
+.compare-card.fake h3{color:#c0392b;display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+.compare-card.real{background:#fff;border:2px solid #b5d6a8}
+.compare-card.real h3{color:#1a5276;display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+.compare-card ul{list-style:none;padding:0}
+.compare-card li{padding:7px 0;border-bottom:1px solid #f0f0f0;font-size:.88rem;color:#555;display:flex;align-items:center;gap:8px}
+.compare-card li:last-child{border-bottom:none}
+.compare-card li .mark{font-weight:700}
+.compare-card.fake li .mark{color:#c0392b}
+.compare-card.real li .mark{color:#1a5276}
+.cert-detail{padding:80px 0;background:#fff}
+.cert-detail h2{text-align:center;font-size:2rem;font-weight:700;color:#1a5276;margin-bottom:.5rem}
+.cert-detail .sub{text-align:center;color:#888;margin-bottom:2.5rem;font-size:.93rem}
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.detail-card{padding:35px 30px;border-radius:16px;background:#f4f7fa;transition:all .3s;position:relative}
+.detail-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.detail-card .num{font-size:3rem;font-weight:900;color:rgba(26,82,118,.08);position:absolute;top:10px;right:20px;line-height:1}
+.detail-card .icon{font-size:1.5rem;margin-bottom:.6rem;display:block}
+.detail-card h3{font-size:1.05rem;font-weight:700;color:#1a5276;margin-bottom:.6rem}
+.detail-card p{color:#666;font-size:.85rem;line-height:1.8}
+.detail-card .info-row{background:#fff;border-radius:8px;padding:8px 14px;margin-top:.5rem;display:flex;justify-content:space-between;font-size:.82rem}
+.detail-card .info-row .lbl{color:#888}
+.detail-card .info-row .val{color:#1a5276;font-weight:600}
+.cert-cta{padding:60px 0;background:linear-gradient(135deg,#1a5276,#2e7d5e);color:#fff;text-align:center}
+.cert-cta h2{font-size:1.8rem;font-weight:700;margin-bottom:1rem}
+.cert-cta p{max-width:600px;margin:0 auto;opacity:.9;font-size:1rem;line-height:1.8}
+@media(max-width:768px){
+.cert-badges-inner{flex-direction:column;align-items:center}
+.cert-badge{max-width:100%}
+.compare-grid{grid-template-columns:1fr}
+.detail-grid{grid-template-columns:1fr}
+.cert-hero h2{font-size:2rem}
+}
+
+</style>
+
+<!-- SEO -->
+<meta name="description" content="宸廷綠色工程有限公司專業代理茂茂峰林國際100%生物可分解材料，提供茶纖吸管、環保餐具、植纖日用品、客製化OEM/ODM服務。通過SGS、Intertek、Beta國際認證。">
+<meta name="keywords" content="生物可分解材料,茶纖吸管,環保餐具,植纖日用品,植物纖維複合材料,可堆肥材料,OEM環保產品,茂茂峰林,宸廷綠色工程,biodegradable,compostable">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eco.chanting-green.com/">
+<!-- OG -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="website">
+<meta property="og:title" content="宸廷綠色工程有限公司 | 生物可分解材料專家">
+<meta property="og:description" content="專業代理茂茂峰林國際100%生物可分解材料，通過SGS/Intertek/Beta國際認證">
+<meta property="og:url" content="https://eco.chanting-green.com/">
+<meta property="og:site_name" content="宸廷綠色工程 - 環保材料專賣">
+<meta property="og:image" content="https://eco.chanting-green.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="宸廷綠色工程有限公司 | 生物可分解材料專家">
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7RE3C1L4EJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7RE3C1L4EJ');
+</script>
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "官廷綠色工程有限公司",
+  "alternateName": "Chanting Green Engineering Co., Ltd.",
+  "url": "https://eco.chanting-green.com/",
+  "telephone": "03-4823837",
+  "email": "service@chanting-green.com",
+  "taxID": "93554455",
+  "description": "專業代理茂茂峰林國際100%生物可分解材料"
+}
+</script>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+<div class="nav-inner">
+<a href="#" class="nav-logo">
+<img src="宸廷Logo-去背 1140222R01-01.png" alt="" onerror="this.style.display='none'">
+<span class="brand-text">宸廷綠色工程<small>宸廷綠色工程有限公司</small></span>
+</a>
+<button class="hamburger" id="hamburger" aria-label="選單"><span></span><span></span><span></span></button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#about">關於我們</a></li>
+<li><a href="#services">服務項目</a></li>
+<li><a href="#products">產品應用</a></li>
+<li><a href="#env">環保理念</a></li>
+<li><a href="#cert">認證標章</a></li>
+<li><a href="#contact">聯絡我們</a></li>
+</ul>
+</div>
+</nav><section class="hero" id="home">
+<div class="hero-overlay"></div>
+<div class="hero-particles" id="particles"></div>
+<div class="hero-content">
+<img src="宸廷Logo-去背 1140222R01-01.png" alt="" class="hero-logo" onerror="this.style.display='none'">
+<p class="tagline">讓環境更美好</p>
+<h1>宸廷綠色工程</h1>
+<p class="sub-tagline">專業代理茂茂峰林國際 100% 生物可分解植物纖維複合材料<br>提供茶纖吸管、環保餐具、植纖日用品等永續環保商品</p>
+<a href="#about" class="hero-btn">了解更多</a>
+</div>
+<div class="scroll-indicator"><div class="mouse"></div><span>向下探索</span></div>
+</section><section class="about" id="about">
+<div class="container">
+<p class="section-subtitle fade-up">About Us</p>
+<h2 class="section-title fade-up delay-100">關於宸廷綠色工程</h2>
+<p class="section-desc fade-up delay-200">專業代理生物可分解材料，為企業提供永續解決方案</p>
+<div class="about-grid">
+<div class="about-image fade-left"><img src="log0_no_background.png" alt="" onerror="this.style.display='none'"></div>
+<div class="about-text fade-right">
+<h2>宸廷綠色工程有限公司</h2>
+<p>宸廷綠色工程有限公司致力於推廣環境友善產品，專業代理茂茂峰林國際股份有限公司研發生產的 <strong>100% 生物可分解植物纖維複合材料</strong>，包含茶纖吸管、環保餐具、植纖日用品等多元產品。</p>
+<p>我們相信，每一次的消費選擇都能為地球帶來正面影響。透過推廣生物可分解材料，希望減少塑胶微粒對環境與人體的影響。</p><div class="highlight-box">✔ 專業代理茂茂峰林國際，提供完整的產品服務與技術支援<br>✔ 從產品選購、客製化服務到使用諮詢，提供一站式解決方案<br>✔ 協助企業轉型環保化，符合ESG永續發展目標</div>
+<div class="about-stats">
+<div class="stat-item"><div class="number">100%</div><div class="label">生物可分解</div></div>
+<div class="stat-item"><div class="number">茶纖維</div><div class="label">天然材料</div></div>
+<div class="stat-item"><div class="number">植物纖維</div><div class="label">複合材料</div></div>
+<div class="stat-item"><div class="number">永續</div><div class="label">環保解決方案</div></div>
+</div></div></div></div></section><section class="services" id="services">
+<div class="container">
+<p class="section-subtitle fade-up">Service</p>
+<h2 class="section-title fade-up delay-100">服務項目</h2>
+<p class="section-desc fade-up delay-200">從產品供應到客製化服務，提供完整的環保解決方案</p>
+<div class="services-grid">
+<div class="service-card fade-up delay-100"><span class="number">01</span><span class="icon">🌱</span><h3>茂茂峰林成品代理</h3><p>宸廷綠色工程專業代理茂茂峰林國際的生物可分解產品，包含茶纖吸管、環保餐具、植纖日用品等，取代一次性塑胶產品。</p></div>
+<div class="service-card fade-up delay-200"><span class="number">02</span><span class="icon">♻️</span><h3>經營永續商品服務</h3><p>協助企業開發屬於自己的環境友善品牌，從設計、製造到生產，提供完整的OEM/ODM服務。</p></div>
+<div class="service-card fade-up delay-300"><span class="number">03</span><span class="icon">🔬</span><h3>生物可分解材料推廣</h3><p>提供完整的生物可分解/可堆肥樹脂複合材料資訊，帶您了解各種材料的特性與應用。</p></div>
+</div></div></section><section class="products" id="products">
+<div class="container">
+<p class="section-subtitle fade-up">Products</p>
+<h2 class="section-title fade-up delay-100">產品應用</h2>
+<p class="section-desc fade-up delay-200">多樣化的生物可分解產品，全面取代塑胶製品</p>
+<div class="products-grid">
+<div class="product-card fade-up delay-100"><div class="img-wrap"><span class="product-placeholder">🥤</span></div><div class="info"><h4>茶纖吸管</h4><p>採用天然茶纖維製成，可完全生物分解，不產生塑胶微粒。適合手擁物、飲料店、餐飲業。</p></div></div>
+<div class="product-card fade-up delay-200"><div class="img-wrap"><span class="product-placeholder">🍽️</span></div><div class="info"><h4>環保餐具</h4><p>植物纖維複合材料製成的盤、碗、盒等，堅固耐用、可微波加熱，用後可完全生物分解。</p></div></div>
+<div class="product-card fade-up delay-300"><div class="img-wrap"><span class="product-placeholder">🧴</span></div><div class="info"><h4>植纖日用品</h4><p>從化妝品容器到生活雜貨，以植物纖維材料製成，讓生活更環保。</p></div></div>
+<div class="product-card fade-up delay-400"><div class="img-wrap"><span class="product-placeholder">📦</span></div><div class="info"><h4>客製化訂製</h4><p>提供完整的 OEM/ODM 服務，根據客戶需求開發專屮的生物可分解產品。</p></div></div>
+</div></div></section><section class="env-section" id="env">
+<div class="container">
+<p class="section-subtitle fade-up">Environmental Issues</p>
+<h2 class="section-title fade-up delay-100">環保理念與現狀</h2>
+<p class="section-desc fade-up delay-200">了解塑胶危害，為地球做更好的選擇</p>
+<div class="env-grid">
+<div class="env-card fade-up"><div class="env-icon">🌊</div><h3>塑胶污染的嚴峻性</h3><p>全球每年約有 7,800 萬啘塑胶包裝材料產出，其中約 32% 排放至環境，兩千五百萬啘流入海洋。傳統塑胶需要數百年才能分解。</p></div>
+<div class="env-card fade-up delay-200"><div class="env-icon">🌱</div><h3>生物可分解材料的优势</h3><p>生物可分解材料在適當的堆肥環境下，可以完全分解回歸自然，不產生塑胶微粒，從天然植物纖維取材，實現循環經濟。</p></div><div class="env-card fade-up delay-100"><div class="env-icon">⚠️</div><h3>市面標示生物可分解的區分</h3><p>市面上許多所謂生物可分解產品實際上是傳統塑胶加其他物質，僅能裂解成塑胶微粒，通不過國際可堆肥認證。茂茂峰林的材料屬於真正的生物可分解/可堆肥樹脂。</p></div>
+<div class="env-card fade-up delay-300"><div class="env-icon">🌍</div><h3>循環經濟與未來</h3><p>全球生物樹脂材料產能持續成長，顯示市場對環保材料的需求日益增加。選擇生物可分解材料，是為下一代留下更美好環境的承諾。</p></div>
+</div></div></section><section class="agent-section">
+<div class="container"><div class="fade-up">
+<p class="partner">✔ 官方授權代理</p>
+<h2>宸廷綠色工程 × 茂茂峰林國際</h2>
+<p>宸廷綠色工程有限公司為茂茂峰林國際股份有限公司的專業代理商，提供完整的生物可分解產品線。我們擁有專業的產品知識與服務能力，能為您提供最適合的環保解決方案。歡迎各種機構、企業、品牌商、通路商合作。</p>
+</div></div></section><section class="certification" id="cert">
+<section class="cert-hero">
+<div class="container fade-up">
+<p style="font-size:.9rem;letter-spacing:4px;text-transform:uppercase;opacity:.6;margin-bottom:.5rem">Certification</p>
+<h2>國際認證標章</h2>
+<p>茂茂峰林國際的產品通過多項國際權威機構檢測與認證</p>
+</div>
+</section>
+<section class="cert-badges">
+<div class="cert-badges-inner">
+<div class="cert-badge fade-up">
+<div class="badge-icon" style="font-size:1.8rem">SGS</div>
+<h3>SGS 檢驗認證</h3>
+<p class="badge-sub">國際權威檢測機構</p>
+<p class="badge-desc">SGS 為全球領先的檢驗、測試及認證機構，遍布全球 2,600 多個分支機構。茂茂峰林的產品通過 SGS 嚴格檢測，確保產品品質符合國際標準。</p>
+<span class="badge-tag">✓ 品質保證</span>
+</div>
+<div class="cert-badge fade-up delay-100">
+<div class="badge-icon" style="font-size:1.2rem">Intertek</div>
+<h3>Intertek 認證</h3>
+<p class="badge-sub">全球品質保證</p>
+<p class="badge-desc">Intertek 為全球領先的全面品質保證服務機構，提供測試、檢驗和認證服務。茂茂峰林的產品通過 Intertek 驗證，確保產品的安全性與環保效益。</p>
+<span class="badge-tag">✓ 環保認證</span>
+</div>
+<div class="cert-badge fade-up delay-200">
+<div class="badge-icon" style="font-size:1.5rem">β</div>
+<h3>Beta 生物機含量檢測</h3>
+<p class="badge-sub">美國實驗室認證</p>
+<p class="badge-desc">Beta Analytic 為美國權威實驗室，提供放射性碳定年法與生物機含量檢測。驗證產品中生物基含量，確保為真正的生物可分解材料。</p>
+<span class="badge-tag">✓ 生物基驗證</span>
+</div>
+</div>
+</section>
+<section class="cert-compare">
+<div class="container">
+<h2 class="fade-up">真正的生物可分解 vs 虛假標示</h2>
+<p class="sub fade-up delay-100">市面許多標示「生物可分解」的產品其實無法真正分解</p>
+<div class="compare-grid">
+<div class="compare-card fake fade-left">
+<h3>✕ 虛假生物可分解</h3>
+<ul>
+<li><span class="mark">✕</span> 傳統塑膠+光敏促進劑 → 裂解成碎片</li>
+<li><span class="mark">✕</span> 傳統塑膠+玉米澱粉/碳酸鈣 → 裂解成微粒</li>
+<li><span class="mark">✕</span> 傳統塑膠+氧化添加劑 → 裂解成粉末</li>
+<li><span class="mark">✕</span> 無法通過國際可堆肥認證</li>
+<li><span class="mark">✕</span> 仍會產生塑膠微粒污染環境</li>
+<li><span class="mark">✕</span> 歐盟已禁用氧化降解塑膠</li>
+</ul>
+</div>
+<div class="compare-card real fade-right">
+<h3>✓ 真正生物可分解</h3>
+<ul>
+<li><span class="mark">✓</span> 100% 植物纖維複合材料製成</li>
+<li><span class="mark">✓</span> 通過國際可堆肥認證標準</li>
+<li><span class="mark">✓</span> 完全分解回歸自然</li>
+<li><span class="mark">✓</span> 不產生塑膠微粒</li>
+<li><span class="mark">✓</span> 通過 SGS / Intertek 檢驗</li>
+<li><span class="mark">✓</span> Beta 生物機含量檢測驗證</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="cert-detail">
+<div class="container">
+<h2 class="fade-up">認證細節說明</h2>
+<p class="sub fade-up delay-100">深入了解各項認證的檢驗標準與意義</p>
+<div class="detail-grid">
+<div class="detail-card fade-up">
+<span class="num">01</span>
+<span class="icon">📋</span>
+<h3>SGS 檢測項目</h3>
+<p>SGS 針對產品進行全方位的品質與安全檢測，包含材料成分分析、重金屬檢測、微生物檢測等，確保產品符合國際安全標準，對人體與環境無害。</p>
+<div class="info-row"><span class="lbl">檢測機構</span><span class="val">SGS Taiwan</span></div>
+<div class="info-row"><span class="lbl">檢測範圍</span><span class="val">成分/安全/環保</span></div>
+</div>
+<div class="detail-card fade-up delay-100">
+<span class="num">02</span>
+<span class="icon">🏭</span>
+<h3>Intertek 驗證標準</h3>
+<p>Intertek 為產品提供全面的品質保證服務，驗證材料在生物分解性能、重金屬含量、食品接觸安全等方面符合國際標準，確保產品從原料到成品皆安全可靠。</p>
+<div class="info-row"><span class="lbl">驗證機構</span><span class="val">Intertek</span></div>
+<div class="info-row"><span class="lbl">驗證範圍</span><span class="val">分解性能/食品接觸</span></div>
+</div>
+<div class="detail-card fade-up delay-200">
+<span class="num">03</span>
+<span class="icon">🔬</span>
+<h3>Beta 生物機含量檢測</h3>
+<p>使用 ASTM D6866 標準方法，透過放射性碳定年法檢測產品中的生物基含量。高生物機含量代表產品源自天然植物材料，而非石油基塑膠，是真正的環保材料。</p>
+<div class="info-row"><span class="lbl">檢測機構</span><span class="val">Beta Analytic 美國</span></div>
+<div class="info-row"><span class="lbl">檢測標準</span><span class="val">ASTM D6866</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="cert-cta">
+<div class="container fade-up">
+<h2>安心選擇，有憑有據</h2>
+<p>宸廷綠色工程代理的茂茂峰林國際產品，所有材料均符合國際可堆肥標準，擁有完整檢測報告。歡迎與我們聯繫索取相關認證文件，讓我們用數據說話。</p>
+</div>
+</section>id="contact">
+<div class="container">
+<p class="section-subtitle fade-up">Contact</p>
+<h2 class="section-title fade-up delay-100">聯絡宸廷綠色工程</h2>
+<p class="section-desc fade-up delay-200">歡迎與我們聯繫，了解更多生物可分解產品資訊</p>
+<div class="contact-grid">
+<div class="contact-info fade-left">
+<p class="agent-label">宸廷綠色工程有限公司</p>
+<h3>茂茂峰林國際 專業代理</h3>
+<div class="info-item"><span class="icon">📞</span> 電話: 03-4823837</div>
+<div class="info-item"><span class="icon">📧</span> 郵件: service@chanting-green.com</div>
+<div class="info-item"><span class="icon">💬</span> LINE OA: @chanting</div>
+<div class="info-item"><span class="icon">📋</span> 統編: 93554455</div>
+<div class="divider"></div>
+<p style="color:#888;font-size:.88rem;line-height:1.8;">我們專業代理茂茂峰林國際的生物可分解產品，<br>歡迎品牌商、製造商、通路商洽談合作。</p>
+</div>
+<form class="contact-form fade-right" id="contactForm">
+<div class="form-group"><input type="text" placeholder="您的姓名" required></div>
+<div class="form-group"><input type="email" placeholder="電子郵件" required></div>
+<div class="form-group"><input type="text" placeholder="聯絡電話"></div>
+<div class="form-group"><textarea placeholder="請輸入您對產品的問題或需求，我們將盡快與您聯繫"></textarea></div>
+<div class="form-group"><button type="button" class="submit-btn" onclick="alert('感謝您的訊息，宸廷綠色工程將盡快與您聯繫！')">送出訊息</button></div>
+</form></div></div></section><footer class="footer">
+<div class="container">
+<p class="brand">宸廷綠色工程有限公司 Chanting Green Engineering Co., Ltd.</p>
+<p>專業代理茂茂峰林國際生物可分解產品</p>
+<p>電話: 03-4823837 | 郵件: service@chanting-green.com | LINE: @chanting</p>
+<p class="small">統編: 93554455 | <a href="https://chanting-green.com/" target="_blank">chanting-green.com</a></p>
+<p class="small">&copy; 2026 宸廷綠色工程有限公司 All Rights Reserved. | <a href="https://chanting-green.com/" target="_blank" style="color:#85c1e9">返回主站</a></p>
+</div></footer><script>
+(function(){
+    var c=document.getElementById("particles");
+    if(!c)return;
+    for(var i=0;i<25;i++){
+        var p=document.createElement("div");
+        p.className="particle";
+        var s=3+Math.random()*5;
+        p.style.width=s+"px";
+        p.style.height=s+"px";
+        p.style.left=Math.random()*100+"%";
+        p.style.animationDuration=(15+Math.random()*25)+"s";
+        p.style.animationDelay=(Math.random()*15)+"s";
+        c.appendChild(p);
+    }
+    var h=document.getElementById("hamburger"),nl=document.getElementById("navLinks");
+    if(h){h.addEventListener("click",function(){h.classList.toggle("active");nl.classList.toggle("open");});}
+    nl.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){h.classList.remove("active");nl.classList.remove("open");});});
+    var nb=document.getElementById("navbar");
+    window.addEventListener("scroll",function(){window.scrollY>50?nb.classList.add("scrolled"):nb.classList.remove("scrolled");});
+    var ae=function(){
+        var e=document.querySelectorAll(".fade-up,.fade-left,.fade-right");
+        var wt=window.innerHeight*0.88;
+        e.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<wt)el.classList.add("active");});
+    };
+    window.addEventListener("load",ae);window.addEventListener("scroll",ae);window.addEventListener("resize",ae);
+    setTimeout(ae,100);
+})();
+</script>
+</body>
+</html>

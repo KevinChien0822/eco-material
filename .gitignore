@@ -1,0 +1,23 @@
+﻿# Dependencies / build artifacts
+node_modules/
+.vercel/
+*.pyc
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large / unnecessary files
+*.pptx
+
+# Generated / temp
+gen_html.py
+write_html.py
+_html_b64.txt
