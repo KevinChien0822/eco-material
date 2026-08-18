@@ -1,4 +1,4 @@
-﻿# Dependencies / build artifacts
+# Dependencies / build artifacts
 node_modules/
 .vercel/
 *.pyc
@@ -22,3 +22,8 @@ gen_html.py
 write_html.py
 _html_b64.txt
 .vercel
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local

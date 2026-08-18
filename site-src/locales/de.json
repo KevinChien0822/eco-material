@@ -156,6 +156,8 @@
   "form.message": "Beschreiben Sie Ihre Fragen oder Anforderungen – wir melden uns schnellstmöglich bei Ihnen",
   "form.submit": "Nachricht senden",
   "form.alert": "Vielen Dank für Ihre Nachricht. Chanting Green Engineering wird sich bald bei Ihnen melden!",
+  "form.sending": "Wird gesendet…",
+  "form.error": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder rufen Sie uns an: 03-4823837.",
   "footer.brand": "Chanting Green Engineering Co., Ltd.",
   "footer.tagline": "Offizieller Vertriebspartner der biologisch abbaubaren Produkte von Mao Mao Feng Lin International",
   "footer.contact": "Telefon: 03-4823837 | E-Mail: service@chanting-green.com | LINE: @chanting",

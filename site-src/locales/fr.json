@@ -156,6 +156,8 @@
   "form.message": "Décrivez vos questions ou besoins produits ; nous vous répondrons dans les plus brefs délais",
   "form.submit": "Envoyer le message",
   "form.alert": "Merci pour votre message. Chanting Green Engineering vous contactera bientôt !",
+  "form.sending": "Envoi en cours…",
+  "form.error": "Échec de l'envoi du message. Veuillez réessayer plus tard ou nous appeler au 03-4823837.",
   "footer.brand": "Chanting Green Engineering Co., Ltd.",
   "footer.tagline": "Distributeur officiel des produits biodégradables de Mao Mao Feng Lin International",
   "footer.contact": "Téléphone : 03-4823837 | E-mail : service@chanting-green.com | LINE : @chanting",

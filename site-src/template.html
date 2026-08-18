@@ -450,11 +450,13 @@ img{max-width:100%;height:auto;display:block}
 <p style="color:#888;font-size:.88rem;line-height:1.8;">{{contact.note1}}<br>{{contact.note2}}</p>
 </div>
 <form class="contact-form fade-right" id="contactForm">
-<div class="form-group"><input type="text" placeholder="{{form.name}}" required></div>
-<div class="form-group"><input type="email" placeholder="{{form.email}}" required></div>
-<div class="form-group"><input type="text" placeholder="{{form.phone}}"></div>
-<div class="form-group"><textarea placeholder="{{form.message}}"></textarea></div>
-<div class="form-group"><button type="button" class="submit-btn" onclick="alert('{{form.alert}}')">{{form.submit}}</button></div>
+<div class="form-group"><input type="text" id="cf-name" name="name" placeholder="{{form.name}}" required maxlength="100" autocomplete="name"></div>
+<div class="form-group"><input type="email" id="cf-email" name="email" placeholder="{{form.email}}" required maxlength="200" autocomplete="email"></div>
+<div class="form-group"><input type="text" id="cf-phone" name="phone" placeholder="{{form.phone}}" maxlength="50" autocomplete="tel"></div>
+<div class="form-group"><textarea id="cf-message" name="message" placeholder="{{form.message}}" required maxlength="5000"></textarea></div>
+<div class="form-group" style="display:none" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+<div class="form-group"><button type="submit" class="submit-btn" id="cf-submit">{{form.submit}}</button></div>
+<div id="formStatus" role="status" aria-live="polite" style="margin-top:.8rem;font-size:.9rem;text-align:center;font-weight:600"></div>
 </form>
 </div>
 </div>
@@ -495,6 +497,37 @@ img{max-width:100%;height:auto;display:block}
     };
     window.addEventListener("load",ae);window.addEventListener("scroll",ae);window.addEventListener("resize",ae);
     setTimeout(ae,100);
+    var cf=document.getElementById("contactForm");
+    if(cf){
+        var cfBtn=document.getElementById("cf-submit"),cfStatus=document.getElementById("formStatus");
+        var cfSubmitLabel=cfBtn?cfBtn.textContent:"";
+        cf.addEventListener("submit",function(ev){
+            ev.preventDefault();
+            if(!cfBtn||!cfStatus)return;
+            cfBtn.disabled=true;cfBtn.textContent="{{form.sending}}";
+            cfStatus.textContent="";cfStatus.style.color="#1a5276";
+            var payload={
+                name:document.getElementById("cf-name").value.trim(),
+                email:document.getElementById("cf-email").value.trim(),
+                phone:(document.getElementById("cf-phone").value||"").trim(),
+                message:document.getElementById("cf-message").value.trim(),
+                website:(cf.querySelector('input[name="website"]').value||"").trim()
+            };
+            fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
+            .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+            .then(function(res){
+                if(res.ok&&res.d&&res.d.ok){
+                    cfStatus.textContent="{{form.alert}}";
+                    cf.reset();
+                }else{
+                    cfStatus.style.color="#c0392b";
+                    cfStatus.textContent="{{form.error}}";
+                }
+            })
+            .catch(function(){cfStatus.style.color="#c0392b";cfStatus.textContent="{{form.error}}";})
+            .then(function(){cfBtn.disabled=false;cfBtn.textContent=cfSubmitLabel;});
+        });
+    }
 })();
 </script>
 </body>

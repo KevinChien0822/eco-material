@@ -156,6 +156,8 @@
   "form.message": "請輸入您對產品的問題或需求，我們將盡快與您聯繫",
   "form.submit": "送出訊息",
   "form.alert": "感謝您的訊息，宸廷綠色工程將盡快與您聯繫！",
+  "form.sending": "送出中…",
+  "form.error": "訊息送出失敗，請稍後再試，或直接來電 03-4823837",
   "footer.brand": "宸廷綠色工程有限公司 Chanting Green Engineering Co., Ltd.",
   "footer.tagline": "專業代理茂茂峰林國際生物可分解產品",
   "footer.contact": "電話: 03-4823837 | 郵件: service@chanting-green.com | LINE: @chanting",
