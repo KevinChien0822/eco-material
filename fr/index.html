@@ -236,6 +236,13 @@ img{max-width:100%;height:auto;display:block}
 .cert-compost-badge .badge-sub{font-size:.8rem;color:#888;margin-bottom:.7rem}
 .cert-compost-badge .badge-desc{font-size:.85rem;color:#555;line-height:1.7}
 .cert-compost-badge .badge-tag{display:inline-block;margin-top:.8rem;padding:4px 14px;background:#d4e6f1;color:#1a5276;border-radius:20px;font-size:.75rem;font-weight:600}
+.cert-docs{margin-top:2.5rem}
+.cert-docs-title{text-align:center;color:#1a5276;font-weight:600;font-size:.95rem;margin-bottom:1.2rem}
+.cert-docs-grid{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.cert-doc{display:block;width:220px;background:#fff;border:1px solid #e8eef3;border-radius:12px;overflow:hidden;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.05);transition:all .3s}
+.cert-doc:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(26,82,118,.14)}
+.cert-doc img{width:100%;height:150px;object-fit:cover;display:block;background:#f4f7fa}
+.cert-doc span{display:block;padding:10px 8px;font-size:.82rem;color:#1a5276;font-weight:600}
 .materials{margin-top:70px}
 .mat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
 .mat-card{background:#f4f7fa;border:1px solid #e8eef3;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;transition:all .3s}
@@ -421,21 +428,21 @@ img{max-width:100%;height:auto;display:block}
 <section class="cert-badges">
 <div class="cert-badges-inner">
 <div class="cert-badge fade-up">
-<div class="badge-icon" style="font-size:1.8rem">SGS</div>
+<div class="badge-icon" style="padding:10px"><img src="/certs/sgs.png" alt="SGS" style="max-height:42px;width:auto"></div>
 <h3>Contrôle et certification SGS</h3>
 <p class="badge-sub">Organisme de contrôle internationalement reconnu</p>
 <p class="badge-desc">SGS est un leader mondial de l’inspection, des essais et de la certification, avec plus de 2 600 bureaux dans le monde. Les produits de Mao Mao Feng Lin passent des contrôles SGS rigoureux pour garantir une qualité conforme aux normes internationales.</p>
 <span class="badge-tag">✓ Assurance qualité</span>
 </div>
 <div class="cert-badge fade-up delay-100">
-<div class="badge-icon" style="font-size:1.2rem">Intertek</div>
+<div class="badge-icon" style="padding:12px"><img src="/certs/intertek.svg" alt="Intertek" style="max-height:34px;width:auto"></div>
 <h3>Certification Intertek</h3>
 <p class="badge-sub">Assurance qualité mondiale</p>
 <p class="badge-desc">Intertek est un prestataire mondial de services d’assurance qualité, notamment d’essais, d’inspection et de certification. Les produits de Mao Mao Feng Lin sont vérifiés par Intertek, garantissant sécurité et performance environnementale.</p>
 <span class="badge-tag">✓ Certification environnementale</span>
 </div>
 <div class="cert-badge fade-up delay-200">
-<div class="badge-icon" style="font-size:1.5rem">β</div>
+<div class="badge-icon" style="padding:10px"><img src="/certs/beta.jpg" alt="Beta" style="max-height:42px;width:auto;border-radius:50%"></div>
 <h3>Contrôle de la teneur en bio-carbone Beta</h3>
 <p class="badge-sub">Certification en laboratoire américain</p>
 <p class="badge-desc">Beta Analytic est un laboratoire américain de référence pour la datation au radiocarbone et la mesure de la teneur en bio-carbone. Cette vérification garantit que le matériau est réellement biodégradable.</p>
@@ -470,6 +477,19 @@ img{max-width:100%;height:auto;display:block}
 <p class="badge-sub">Norme nationale australienne</p>
 <p class="badge-desc">Certifiés selon la norme australienne AS 5810 pour le compostage domestique, les produits se dégradent entièrement en environnement de compost domestique et obtiennent le certificat ABA.</p>
 <span class="badge-tag">✓ AS 5810</span>
+</div>
+</div>
+<div class="cert-docs fade-up">
+<p class="cert-docs-title">Documents de certification associés (cliquez pour agrandir)</p>
+<div class="cert-docs-grid">
+<a class="cert-doc" href="/certs/aba_cert.jpg" target="_blank" rel="noopener">
+<img src="/certs/aba_cert.jpg" alt="Certificat de compostabilité ABA (Australie)">
+<span>Certificat de compostabilité ABA (Australie)</span>
+</a>
+<a class="cert-doc" href="/certs/sustainability_statement.jpg" target="_blank" rel="noopener">
+<img src="/certs/sustainability_statement.jpg" alt="Déclaration de durabilité des matériaux biodégradables">
+<span>Déclaration de durabilité des matériaux biodégradables</span>
+</a>
 </div>
 </div>
 </div>

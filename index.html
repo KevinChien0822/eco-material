@@ -236,6 +236,13 @@ img{max-width:100%;height:auto;display:block}
 .cert-compost-badge .badge-sub{font-size:.8rem;color:#888;margin-bottom:.7rem}
 .cert-compost-badge .badge-desc{font-size:.85rem;color:#555;line-height:1.7}
 .cert-compost-badge .badge-tag{display:inline-block;margin-top:.8rem;padding:4px 14px;background:#d4e6f1;color:#1a5276;border-radius:20px;font-size:.75rem;font-weight:600}
+.cert-docs{margin-top:2.5rem}
+.cert-docs-title{text-align:center;color:#1a5276;font-weight:600;font-size:.95rem;margin-bottom:1.2rem}
+.cert-docs-grid{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.cert-doc{display:block;width:220px;background:#fff;border:1px solid #e8eef3;border-radius:12px;overflow:hidden;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.05);transition:all .3s}
+.cert-doc:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(26,82,118,.14)}
+.cert-doc img{width:100%;height:150px;object-fit:cover;display:block;background:#f4f7fa}
+.cert-doc span{display:block;padding:10px 8px;font-size:.82rem;color:#1a5276;font-weight:600}
 .materials{margin-top:70px}
 .mat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
 .mat-card{background:#f4f7fa;border:1px solid #e8eef3;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;transition:all .3s}
@@ -421,21 +428,21 @@ img{max-width:100%;height:auto;display:block}
 <section class="cert-badges">
 <div class="cert-badges-inner">
 <div class="cert-badge fade-up">
-<div class="badge-icon" style="font-size:1.8rem">SGS</div>
+<div class="badge-icon" style="padding:10px"><img src="/certs/sgs.png" alt="SGS" style="max-height:42px;width:auto"></div>
 <h3>SGS 檢驗認證</h3>
 <p class="badge-sub">國際權威檢測機構</p>
 <p class="badge-desc">SGS 為全球領先的檢驗、測試及認證機構，遍布全球 2,600 多個分支機構。茂茂峰林的產品通過 SGS 嚴格檢測，確保產品品質符合國際標準。</p>
 <span class="badge-tag">✓ 品質保證</span>
 </div>
 <div class="cert-badge fade-up delay-100">
-<div class="badge-icon" style="font-size:1.2rem">Intertek</div>
+<div class="badge-icon" style="padding:12px"><img src="/certs/intertek.svg" alt="Intertek" style="max-height:34px;width:auto"></div>
 <h3>Intertek 認證</h3>
 <p class="badge-sub">全球品質保證</p>
 <p class="badge-desc">Intertek 為全球領先的全面品質保證服務機構，提供測試、檢驗和認證服務。茂茂峰林的產品通過 Intertek 驗證，確保產品的安全性與環保效益。</p>
 <span class="badge-tag">✓ 環保認證</span>
 </div>
 <div class="cert-badge fade-up delay-200">
-<div class="badge-icon" style="font-size:1.5rem">β</div>
+<div class="badge-icon" style="padding:10px"><img src="/certs/beta.jpg" alt="Beta" style="max-height:42px;width:auto;border-radius:50%"></div>
 <h3>Beta 生物基含量檢測</h3>
 <p class="badge-sub">美國實驗室認證</p>
 <p class="badge-desc">Beta Analytic 為美國權威實驗室，提供放射性碳定年法與生物基含量檢測。驗證產品中生物基含量，確保為真正的生物可分解材料。</p>
@@ -470,6 +477,19 @@ img{max-width:100%;height:auto;display:block}
 <p class="badge-sub">符合澳洲國家標準</p>
 <p class="badge-desc">依據澳洲國家標準 AS 5810 家用堆肥規範進行驗證，確保產品在家用堆肥環境中可完全分解，獲頒澳洲 ABA 可堆肥證書。</p>
 <span class="badge-tag">✓ AS 5810</span>
+</div>
+</div>
+<div class="cert-docs fade-up">
+<p class="cert-docs-title">相關認證文件（點擊查看大圖）</p>
+<div class="cert-docs-grid">
+<a class="cert-doc" href="/certs/aba_cert.jpg" target="_blank" rel="noopener">
+<img src="/certs/aba_cert.jpg" alt="澳洲 ABA 可堆肥證書">
+<span>澳洲 ABA 可堆肥證書</span>
+</a>
+<a class="cert-doc" href="/certs/sustainability_statement.jpg" target="_blank" rel="noopener">
+<img src="/certs/sustainability_statement.jpg" alt="生物可分解與生物多樣性永續聲明書">
+<span>生物可分解永續聲明書</span>
+</a>
 </div>
 </div>
 </div>
