@@ -225,6 +225,46 @@ img{max-width:100%;height:auto;display:block}
 .detail-grid{grid-template-columns:1fr}
 .cert-hero h2{font-size:2rem}
 }
+.cert-compost{padding:80px 0;background:#f4f7fa}
+.cert-compost h2{text-align:center;font-size:2rem;font-weight:700;color:#1a5276;margin-bottom:.5rem}
+.cert-compost .sub{text-align:center;color:#888;margin-bottom:2.5rem;font-size:.93rem;max-width:760px;margin-left:auto;margin-right:auto;line-height:1.8}
+.cert-compost-inner{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;max-width:1080px;margin:0 auto}
+.cert-compost-badge{background:#fff;border-radius:16px;padding:32px 28px;text-align:center;flex:1;min-width:250px;max-width:320px;border-top:4px solid #2e7d5e;box-shadow:0 4px 20px rgba(0,0,0,.05);transition:all .4s}
+.cert-compost-badge:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,82,118,.12)}
+.cert-compost-badge .badge-icon{width:70px;height:70px;margin:0 auto 1rem;background:#eaf6ef;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#2e7d5e}
+.cert-compost-badge h3{font-size:1.05rem;font-weight:700;color:#1a5276;margin-bottom:.4rem}
+.cert-compost-badge .badge-sub{font-size:.8rem;color:#888;margin-bottom:.7rem}
+.cert-compost-badge .badge-desc{font-size:.85rem;color:#555;line-height:1.7}
+.cert-compost-badge .badge-tag{display:inline-block;margin-top:.8rem;padding:4px 14px;background:#d4e6f1;color:#1a5276;border-radius:20px;font-size:.75rem;font-weight:600}
+.materials{margin-top:70px}
+.materials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
+.material-card{background:#f4f7fa;border-radius:14px;padding:24px 18px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
+.material-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a5276,#2e7d5e);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.material-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(26,82,118,.1)}
+.material-card:hover::before{transform:scaleX(1)}
+.material-card .m-cat{font-size:1.05rem;font-weight:700;color:#1a5276}
+.material-card .m-en{font-size:.7rem;color:#999;text-transform:uppercase;letter-spacing:1px;display:block;margin:.2rem 0 .8rem}
+.material-card ul{list-style:none;padding:0;margin:0;text-align:left}
+.material-card li{font-size:.8rem;color:#666;padding:6px 0;border-bottom:1px dashed #dfe7ef;line-height:1.5}
+.material-card li:last-child{border-bottom:none}
+.material-card li b{color:#1a5276;font-weight:700}
+.materials-note{text-align:center;max-width:760px;margin:1.8rem auto 0;padding:16px 24px;background:#fff;border-radius:12px;font-size:.9rem;color:#666;line-height:1.8;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+@media(max-width:768px){.materials-grid{grid-template-columns:1fr}}
+.carbon-band{margin-top:60px;padding:55px 30px;background:linear-gradient(135deg,#0d3446,#1a5276,#2e7d5e);border-radius:20px;color:#fff;text-align:center}
+.carbon-band h3{font-size:1.6rem;font-weight:700;margin-bottom:.4rem}
+.carbon-band .sub{font-size:.95rem;opacity:.85;max-width:720px;margin:0 auto;line-height:1.8}
+.carbon-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:2rem 0 1.6rem}
+.carbon-stat .num{font-size:2.2rem;font-weight:900;color:#85e0a3;line-height:1.2}
+.carbon-stat .label{font-size:.88rem;opacity:.85;line-height:1.5;margin-top:4px}
+.carbon-note{max-width:840px;margin:0 auto;font-size:.92rem;opacity:.88;line-height:1.9}
+@media(max-width:768px){.carbon-stats{grid-template-columns:repeat(2,1fr)}}
+.degrade-band{margin-top:60px;padding:50px 30px;background:#1a5276;border-radius:20px;color:#fff;text-align:center}
+.degrade-band h3{font-size:1.5rem;font-weight:700;margin-bottom:.4rem}
+.degrade-band .sub{font-size:.95rem;opacity:.85;max-width:720px;margin:0 auto 1.8rem;line-height:1.8}
+.degrade-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.degrade-stat .num{font-size:2.2rem;font-weight:900;color:#85c1e9;line-height:1.2}
+.degrade-stat .label{font-size:.85rem;opacity:.88;line-height:1.5;margin-top:4px}
+@media(max-width:768px){.degrade-stats{grid-template-columns:repeat(2,1fr)}}
     </style>
 </head>
 <body>
@@ -295,6 +335,19 @@ img{max-width:100%;height:auto;display:block}
 <div class="service-card fade-up delay-200"><span class="number">02</span><span class="icon">♻️</span><h3>{{service2.title}}</h3><p>{{service2.desc}}</p></div>
 <div class="service-card fade-up delay-300"><span class="number">03</span><span class="icon">🔬</span><h3>{{service3.title}}</h3><p>{{service3.desc}}</p></div>
 </div>
+<div class="materials fade-up">
+<p class="section-subtitle">{{materials.eyebrow}}</p>
+<h3 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a5276;margin-bottom:.3rem">{{materials.title}}</h3>
+<p class="section-desc" style="margin-bottom:2rem">{{materials.desc}}</p>
+<div class="materials-grid">
+<div class="material-card"><span class="m-cat">{{materials.cat1}}</span><span class="m-en">Extrusion</span><ul><li><b>TS01</b> {{materials.gradeTS1}}</li><li><b>TS02</b> {{materials.gradeTS2}}</li><li><b>TS03</b> {{materials.gradeTS3}}</li></ul></div>
+<div class="material-card"><span class="m-cat">{{materials.cat2}}</span><span class="m-en">Blown Film</span><ul><li><b>FB07</b> {{materials.gradeFB7}}</li><li><b>FB09</b> {{materials.gradeFB9}}</li><li><b>FB11</b> {{materials.gradeFB11}}</li><li><b>FB13</b> {{materials.gradeFB13}}</li></ul></div>
+<div class="material-card"><span class="m-cat">{{materials.cat3}}</span><span class="m-en">Injection</span><ul><li><b>DFST</b> {{materials.gradeDFST}}</li><li><b>TKFS</b> {{materials.gradeTKFS}}</li><li><b>HC</b> {{materials.gradeHC}}</li><li><b>SH</b> {{materials.gradeSH}}</li></ul></div>
+<div class="material-card"><span class="m-cat">{{materials.cat4}}</span><span class="m-en">Lamination</span><ul><li><b>PFC</b> {{materials.gradePFC}}</li></ul></div>
+<div class="material-card"><span class="m-cat">{{materials.cat5}}</span><span class="m-en">Sheet Pressing</span><ul><li><b>RHLB</b> {{materials.gradeRHLB}}</li></ul></div>
+</div>
+<p class="materials-note">{{materials.note}}</p>
+</div>
 </div>
 </section>
 <section class="products" id="products">
@@ -308,6 +361,16 @@ img{max-width:100%;height:auto;display:block}
 <div class="product-card fade-up delay-300"><div class="img-wrap"><span class="product-placeholder">🧴</span></div><div class="info"><h4>{{product3.title}}</h4><p>{{product3.desc}}</p></div></div>
 <div class="product-card fade-up delay-400"><div class="img-wrap"><span class="product-placeholder">📦</span></div><div class="info"><h4>{{product4.title}}</h4><p>{{product4.desc}}</p></div></div>
 </div>
+<div class="degrade-band fade-up">
+<h3>{{degrade.title}}</h3>
+<p class="sub">{{degrade.sub}}</p>
+<div class="degrade-stats">
+<div class="degrade-stat"><div class="num">{{degrade1n}}</div><div class="label">{{degrade1l}}</div></div>
+<div class="degrade-stat"><div class="num">{{degrade2n}}</div><div class="label">{{degrade2l}}</div></div>
+<div class="degrade-stat"><div class="num">{{degrade3n}}</div><div class="label">{{degrade3l}}</div></div>
+<div class="degrade-stat"><div class="num">{{degrade4n}}</div><div class="label">{{degrade4l}}</div></div>
+</div>
+</div>
 </div>
 </section>
 <section class="env-section" id="env">
@@ -320,6 +383,17 @@ img{max-width:100%;height:auto;display:block}
 <div class="env-card fade-up delay-200"><div class="env-icon">🌱</div><h3>{{env2.title}}</h3><p>{{env2.desc}}</p></div>
 <div class="env-card fade-up delay-100"><div class="env-icon">⚠️</div><h3>{{env3.title}}</h3><p>{{env3.desc}}</p></div>
 <div class="env-card fade-up delay-300"><div class="env-icon">🌍</div><h3>{{env4.title}}</h3><p>{{env4.desc}}</p></div>
+</div>
+<div class="carbon-band fade-up">
+<h3>{{carbon.title}}</h3>
+<p class="sub">{{carbon.desc}}</p>
+<div class="carbon-stats">
+<div class="carbon-stat"><div class="num">{{carbon1n}}</div><div class="label">{{carbon1l}}</div></div>
+<div class="carbon-stat"><div class="num">{{carbon2n}}</div><div class="label">{{carbon2l}}</div></div>
+<div class="carbon-stat"><div class="num">{{carbon3n}}</div><div class="label">{{carbon3l}}</div></div>
+<div class="carbon-stat"><div class="num">{{carbon4n}}</div><div class="label">{{carbon4l}}</div></div>
+</div>
+<p class="carbon-note">{{carbon.note}}</p>
 </div>
 </div>
 </section>
@@ -363,6 +437,36 @@ img{max-width:100%;height:auto;display:block}
 </div>
 </div>
 <div class="container"><p class="cert-note fade-up">{{marketNote}}</p></div>
+</section>
+<section class="cert-compost">
+<div class="container">
+<p class="section-subtitle fade-up">{{certCompost.eyebrow}}</p>
+<h2 class="fade-up delay-100">{{certCompost.title}}</h2>
+<p class="sub fade-up delay-100">{{certCompost.desc}}</p>
+<div class="cert-compost-inner">
+<div class="cert-compost-badge fade-up">
+<div class="badge-icon" style="font-size:1.5rem">DIN</div>
+<h3>{{cert4.title}}</h3>
+<p class="badge-sub">{{cert4.sub}}</p>
+<p class="badge-desc">{{cert4.desc}}</p>
+<span class="badge-tag">{{cert4.tag}}</span>
+</div>
+<div class="cert-compost-badge fade-up delay-100">
+<div class="badge-icon" style="font-size:1.5rem">BPI</div>
+<h3>{{cert5.title}}</h3>
+<p class="badge-sub">{{cert5.sub}}</p>
+<p class="badge-desc">{{cert5.desc}}</p>
+<span class="badge-tag">{{cert5.tag}}</span>
+</div>
+<div class="cert-compost-badge fade-up delay-200">
+<div class="badge-icon" style="font-size:1.3rem">ABA</div>
+<h3>{{cert6.title}}</h3>
+<p class="badge-sub">{{cert6.sub}}</p>
+<p class="badge-desc">{{cert6.desc}}</p>
+<span class="badge-tag">{{cert6.tag}}</span>
+</div>
+</div>
+</div>
 </section>
 <section class="cert-compare">
 <div class="container">
