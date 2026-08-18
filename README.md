@@ -50,6 +50,20 @@
 | `MAIL_TO` | 收件信箱（預設同 SMTP_USER） | `service@chanting-green.com` |
 | `MAIL_FROM` | 寄件人顯示（預設同 SMTP_USER） | — |
 
+### 本專案使用的設定（Lark / 飛書國際版郵箱）
+
+本公司信箱托管於 Lark Mail（MX = larksuite.com），推薦設定：
+
+| 變數 | 值 |
+|---|---|
+| `SMTP_HOST` | `smtp.larksuite.com` |
+| `SMTP_PORT` | `587` |
+| `SMTP_SECURE` | `false`（587 使用 STARTTLS） |
+| `SMTP_USER` | `service@chanting-green.com` |
+| `SMTP_PASS` | Lark「應用專用密碼」（Lark 網頁版 → 設定 → 帳號與安全 → 應用專用密碼），**勿用一般登入密碼** |
+
+> 注意：`MAIL_FROM` 請保持與 `SMTP_USER` 相同（Lark 會拒絕與認證帳號不一致的寄件人），只改顯示名稱沒關係。
+
 ### 本機測試
 
 ```bash

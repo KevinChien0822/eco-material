@@ -104,6 +104,7 @@ module.exports = async function handler(req, res) {
     host,
     port: Number(process.env.SMTP_PORT || 465),
     secure: String(process.env.SMTP_SECURE || "true") !== "false", // true=SSL(465)，false=STARTTLS(587)
+    requireTLS: String(process.env.SMTP_SECURE || "true") === "false", // 587 強制 STARTTLS 升級
     auth: { user, pass: process.env.SMTP_PASS || "" },
   });
 
