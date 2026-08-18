@@ -237,19 +237,17 @@ img{max-width:100%;height:auto;display:block}
 .cert-compost-badge .badge-desc{font-size:.85rem;color:#555;line-height:1.7}
 .cert-compost-badge .badge-tag{display:inline-block;margin-top:.8rem;padding:4px 14px;background:#d4e6f1;color:#1a5276;border-radius:20px;font-size:.75rem;font-weight:600}
 .materials{margin-top:70px}
-.materials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
-.material-card{background:#f4f7fa;border-radius:14px;padding:24px 18px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
-.material-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1a5276,#2e7d5e);transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.material-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(26,82,118,.1)}
-.material-card:hover::before{transform:scaleX(1)}
-.material-card .m-cat{font-size:1.05rem;font-weight:700;color:#1a5276}
-.material-card .m-en{font-size:.7rem;color:#999;text-transform:uppercase;letter-spacing:1px;display:block;margin:.2rem 0 .8rem}
-.material-card ul{list-style:none;padding:0;margin:0;text-align:left}
-.material-card li{font-size:.8rem;color:#666;padding:6px 0;border-bottom:1px dashed #dfe7ef;line-height:1.5}
-.material-card li:last-child{border-bottom:none}
-.material-card li b{color:#1a5276;font-weight:700}
+.mat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
+.mat-card{background:#f4f7fa;border:1px solid #e8eef3;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;transition:all .3s}
+.mat-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(26,82,118,.12);border-color:#1a5276}
+.mat-cat-badge{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;background:#d4e6f1;color:#1a5276;margin-bottom:.6rem}
+.mat-code{font-size:1.6rem;font-weight:900;color:#1a5276;line-height:1.15;margin-bottom:.4rem}
+.mat-proc{font-size:.8rem;color:#666;line-height:1.6;margin-bottom:.5rem}
+.mat-tag{display:inline-block;font-size:.68rem;font-weight:600;padding:2px 9px;border-radius:12px;background:#eaf6ef;color:#2e7d5e;margin-bottom:.5rem}
+.mat-apps{font-size:.82rem;color:#555;border-top:1px dashed #dfe7ef;padding-top:.6rem;line-height:1.6}
 .materials-note{text-align:center;max-width:760px;margin:1.8rem auto 0;padding:16px 24px;background:#fff;border-radius:12px;font-size:.9rem;color:#666;line-height:1.8;box-shadow:0 4px 20px rgba(0,0,0,.04)}
-@media(max-width:768px){.materials-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.mat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.mat-grid{grid-template-columns:1fr}}
 .carbon-band{margin-top:60px;padding:55px 30px;background:linear-gradient(135deg,#0d3446,#1a5276,#2e7d5e);border-radius:20px;color:#fff;text-align:center}
 .carbon-band h3{font-size:1.6rem;font-weight:700;margin-bottom:.4rem}
 .carbon-band .sub{font-size:.95rem;opacity:.85;max-width:720px;margin:0 auto;line-height:1.8}
@@ -339,12 +337,20 @@ img{max-width:100%;height:auto;display:block}
 <p class="section-subtitle">Raw Materials</p>
 <h3 style="text-align:center;font-size:1.8rem;font-weight:700;color:#1a5276;margin-bottom:.3rem">Biodegradable Raw Material Product Lines</h3>
 <p class="section-desc" style="margin-bottom:2rem">Biodegradable composite materials compatible with conventional equipment — ready to run without machine modification</p>
-<div class="materials-grid">
-<div class="material-card"><span class="m-cat">Extrusion</span><span class="m-en">Extrusion</span><ul><li><b>TS01</b> straws, cotton swabs</li><li><b>TS02</b> bendable straws</li><li><b>TS03</b> straws, 3D filament</li></ul></div>
-<div class="material-card"><span class="m-cat">Blown Film</span><span class="m-en">Blown Film</span><ul><li><b>FB07</b> vest bags, shower caps, packaging film, food bags</li><li><b>FB09</b> vest bags, packaging film</li><li><b>FB11</b> vest bags, packaging film, flat bags, food bags</li><li><b>FB13</b> vest bags, packaging film</li></ul></div>
-<div class="material-card"><span class="m-cat">Injection</span><span class="m-en">Injection</span><ul><li><b>DFST</b> dental floss picks, toothbrushes, toothpick brushes</li><li><b>TKFS</b> cutlery, combs, hair clips</li><li><b>HC</b> cups, combs, hair clips, cutlery</li><li><b>SH</b> shoe shapers</li></ul></div>
-<div class="material-card"><span class="m-cat">Lamination</span><span class="m-en">Lamination</span><ul><li><b>PFC</b> paper sheets, wood veneer</li></ul></div>
-<div class="material-card"><span class="m-cat">Sheet Pressing</span><span class="m-en">Sheet Pressing</span><ul><li><b>RHLB</b> vacuum-formed products, lunch boxes, blister packs</li></ul></div>
+<div class="mat-grid">
+<div class="mat-card"><span class="mat-cat-badge">Extrusion</span><div class="mat-code">TS01</div><p class="mat-proc">Extrusion process</p><p class="mat-apps">straws, cotton swabs</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Extrusion</span><div class="mat-code">TS02</div><p class="mat-proc">Extrusion process</p><p class="mat-apps">bendable straws</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Extrusion</span><div class="mat-code">TS03</div><p class="mat-proc">Extrusion process</p><p class="mat-apps">straws, 3D filament</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Blown Film</span><div class="mat-code">FB07</div><p class="mat-proc">Blown & cast film process</p><span class="mat-tag">✓ Food-contact safe</span><p class="mat-apps">vest bags, shower caps, packaging film, food bags</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Blown Film</span><div class="mat-code">FB09</div><p class="mat-proc">Blown & cast film process</p><p class="mat-apps">vest bags, packaging film</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Blown Film</span><div class="mat-code">FB11</div><p class="mat-proc">Blown & cast film process</p><span class="mat-tag">✓ Food-contact safe</span><p class="mat-apps">vest bags, packaging film, flat bags, food bags</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Blown Film</span><div class="mat-code">FB13</div><p class="mat-proc">Blown & cast film process</p><p class="mat-apps">vest bags, packaging film</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Injection</span><div class="mat-code">DFST</div><p class="mat-proc">Injection molding process</p><p class="mat-apps">dental floss picks, toothbrushes, toothpick brushes</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Injection</span><div class="mat-code">TKFS</div><p class="mat-proc">Injection molding process</p><p class="mat-apps">cutlery, combs, hair clips</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Injection</span><div class="mat-code">HC</div><p class="mat-proc">Injection molding process</p><p class="mat-apps">cups, combs, hair clips, cutlery</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Injection</span><div class="mat-code">SH</div><p class="mat-proc">Injection molding process</p><p class="mat-apps">shoe shapers</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Lamination</span><div class="mat-code">PFC</div><p class="mat-proc">Lamination process</p><p class="mat-apps">paper sheets, wood veneer</p></div>
+<div class="mat-card"><span class="mat-cat-badge">Sheet Pressing</span><div class="mat-code">RHLB</div><p class="mat-proc">Vacuum forming & sheet pressing process</p><p class="mat-apps">vacuum-formed products, lunch boxes, blister packs</p></div>
 </div>
 <p class="materials-note">All grades are biodegradable composite materials, 100% compatible with conventional plastic processing equipment — no new hardware or mold modification required; simply purge the line when switching materials.</p>
 </div>
