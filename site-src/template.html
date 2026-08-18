@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="{{htmlLang}}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="宸廷綠色工程有限公司專業代理茂茂峰林國際的 100% 生物可分解植物纖維複合材料，提供茶纖吸管、環保餐具、植纖日用品等永續環保商品。產品通過 SGS、Intertek 檢驗與 Beta 生物基含量認證，符合國際可堆肥標準 EN 13432。">
-    <title>宸廷綠色工程有限公司 | 環保材料專賣</title>
-    <meta name="keywords" content="生物可分解材料,茶纖吸管,環保餐具,植纖日用品,可堆肥,生物可分解,OEM,ODM,宸廷綠色工程,茂茂峰林國際,biodegradable,compostable,EN 13432">
+    <meta name="description" content="{{meta.description}}">
+    <title>{{meta.title}}</title>
+    <meta name="keywords" content="{{meta.keywords}}">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://eco-material.chanting-green.com/">
+    <link rel="canonical" href="{{meta.canonical}}">
     <link rel="alternate" hreflang="zh-Hant-TW" href="https://eco-material.chanting-green.com/">
     <link rel="alternate" hreflang="en" href="https://eco-material.chanting-green.com/en/">
     <link rel="alternate" hreflang="de" href="https://eco-material.chanting-green.com/de/">
@@ -16,15 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale" content="{{meta.ogLocale}}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="宸廷綠色工程有限公司 | 100% 生物可分解材料專家">
-    <meta property="og:description" content="專業代理茂茂峰林國際 100% 生物可分解植物纖維複合材料，通過 SGS / Intertek / Beta 國際認證。">
-    <meta property="og:url" content="https://eco-material.chanting-green.com/">
+    <meta property="og:title" content="{{meta.ogTitle}}">
+    <meta property="og:description" content="{{meta.ogDesc}}">
+    <meta property="og:url" content="{{meta.canonical}}">
     <meta property="og:site_name" content="Chanting Green Engineering">
     <meta property="og:image" content="https://eco-material.chanting-green.com/log0_no_background.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="宸廷綠色工程有限公司 | 100% 生物可分解材料專家">
+    <meta name="twitter:title" content="{{meta.ogTitle}}">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RE3C1L4EJ"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -36,13 +36,13 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "宸廷綠色工程有限公司",
-      "alternateName": "Chanting Green Engineering Co., Ltd.",
-      "url": "https://eco-material.chanting-green.com/",
+      "name": "{{schema.name}}",
+      "alternateName": "{{schema.alternateName}}",
+      "url": "{{meta.canonical}}",
       "telephone": "03-4823837",
       "email": "service@chanting-green.com",
       "taxID": "93554455",
-      "description": "專業代理茂茂峰林國際 100% 生物可分解植物纖維複合材料，提供茶纖吸管、環保餐具、植纖日用品等永續環保商品。"
+      "description": "{{schema.description}}"
     }
     </script>
     <style>
@@ -231,23 +231,23 @@ img{max-width:100%;height:auto;display:block}
 <nav class="navbar" id="navbar">
 <div class="nav-inner">
 <a href="#home" class="nav-logo">
-<img src="/%E5%AE%B8%E5%BB%B7Logo-%E5%8E%BB%E8%83%8C%201140222R01-01.png" alt="宸廷綠色工程 logo" onerror="this.style.display='none'">
-<span class="brand-text">宸廷綠色工程<small>宸廷綠色工程有限公司</small></span>
+<img src="/%E5%AE%B8%E5%BB%B7Logo-%E5%8E%BB%E8%83%8C%201140222R01-01.png" alt="{{brand.text}} logo" onerror="this.style.display='none'">
+<span class="brand-text">{{brand.text}}<small>{{brand.sub}}</small></span>
 </a>
-<button class="hamburger" id="hamburger" aria-label="選單"><span></span><span></span><span></span></button>
+<button class="hamburger" id="hamburger" aria-label="{{aria.menu}}"><span></span><span></span><span></span></button>
 <ul class="nav-links" id="navLinks">
-<li><a href="#about">關於我們</a></li>
-<li><a href="#services">服務項目</a></li>
-<li><a href="#products">產品應用</a></li>
-<li><a href="#env">環保理念</a></li>
-<li><a href="#cert">認證標章</a></li>
-<li><a href="#contact">聯絡我們</a></li>
+<li><a href="#about">{{nav.about}}</a></li>
+<li><a href="#services">{{nav.services}}</a></li>
+<li><a href="#products">{{nav.products}}</a></li>
+<li><a href="#env">{{nav.env}}</a></li>
+<li><a href="#cert">{{nav.cert}}</a></li>
+<li><a href="#contact">{{nav.contact}}</a></li>
 </ul>
 <div class="lang-switch" aria-label="Language">
-<a href="/" class="active" title="繁體中文">繁中</a>
-<a href="/en/" class="" title="English">EN</a>
-<a href="/de/" class="" title="Deutsch">DE</a>
-<a href="/fr/" class="" title="Français">FR</a>
+<a href="/" class="{{activeZh}}" title="{{switcher.zh}}">繁中</a>
+<a href="/en/" class="{{activeEn}}" title="{{switcher.en}}">EN</a>
+<a href="/de/" class="{{activeDe}}" title="{{switcher.de}}">DE</a>
+<a href="/fr/" class="{{activeFr}}" title="{{switcher.fr}}">FR</a>
 </div>
 </div>
 </nav>
@@ -255,31 +255,31 @@ img{max-width:100%;height:auto;display:block}
 <div class="hero-overlay"></div>
 <div class="hero-particles" id="particles"></div>
 <div class="hero-content">
-<img src="/%E5%AE%B8%E5%BB%B7Logo-%E5%8E%BB%E8%83%8C%201140222R01-01.png" alt="宸廷綠色工程 logo" class="hero-logo" onerror="this.style.display='none'">
-<p class="tagline">讓環境更美好</p>
-<h1>宸廷綠色工程</h1>
-<p class="sub-tagline">專業代理茂茂峰林國際<br>100% 生物可分解植物纖維複合材料<br>提供茶纖吸管、環保餐具、植纖日用品等永續環保商品</p>
-<a href="#about" class="hero-btn">了解更多</a>
+<img src="/%E5%AE%B8%E5%BB%B7Logo-%E5%8E%BB%E8%83%8C%201140222R01-01.png" alt="{{brand.text}} logo" class="hero-logo" onerror="this.style.display='none'">
+<p class="tagline">{{hero.tagline}}</p>
+<h1>{{hero.title}}</h1>
+<p class="sub-tagline">{{hero.sub1}}<br>{{hero.sub2}}<br>{{hero.sub3}}</p>
+<a href="#about" class="hero-btn">{{hero.cta}}</a>
 </div>
-<div class="scroll-indicator"><div class="mouse"></div><span>向下探索</span></div>
+<div class="scroll-indicator"><div class="mouse"></div><span>{{hero.scroll}}</span></div>
 </section>
 <section class="about" id="about">
 <div class="container">
-<p class="section-subtitle fade-up">About Us</p>
-<h2 class="section-title fade-up delay-100">關於宸廷綠色工程</h2>
-<p class="section-desc fade-up delay-200">專業代理生物可分解材料，為企業提供永續解決方案</p>
+<p class="section-subtitle fade-up">{{about.eyebrow}}</p>
+<h2 class="section-title fade-up delay-100">{{about.title}}</h2>
+<p class="section-desc fade-up delay-200">{{about.desc}}</p>
 <div class="about-grid">
-<div class="about-image fade-left"><img src="/log0_no_background.png" alt="宸廷綠色工程" onerror="this.style.display='none'"></div>
+<div class="about-image fade-left"><img src="/log0_no_background.png" alt="{{brand.text}}" onerror="this.style.display='none'"></div>
 <div class="about-text fade-right">
-<h2>宸廷綠色工程有限公司</h2>
-<p>宸廷綠色工程有限公司致力於推廣環境友善產品，專業代理茂茂峰林國際股份有限公司研發生產的 <strong>100% 生物可分解植物纖維複合材料</strong>，包含茶纖吸管、環保餐具、植纖日用品等多元產品。</p>
-<p>我們相信，每一次的消費選擇都能為地球帶來正面影響。透過推廣生物可分解材料，希望減少塑膠微粒對環境與人體的影響。</p>
-<div class="highlight-box">✔ 專業代理茂茂峰林國際，提供完整的產品服務與技術支援<br>✔ 從產品選購、客製化服務到使用諮詢，提供一站式解決方案<br>✔ 協助企業轉型環保化，符合 ESG 永續發展目標</div>
+<h2>{{about.h2}}</h2>
+<p>{{about.p1}}</p>
+<p>{{about.p2}}</p>
+<div class="highlight-box">{{about.hl1}}<br>{{about.hl2}}<br>{{about.hl3}}</div>
 <div class="about-stats">
-<div class="stat-item"><div class="number">100%</div><div class="label">生物可分解</div></div>
-<div class="stat-item"><div class="number">茶纖維</div><div class="label">天然材料</div></div>
-<div class="stat-item"><div class="number">植物纖維</div><div class="label">複合材料</div></div>
-<div class="stat-item"><div class="number">永續</div><div class="label">環保解決方案</div></div>
+<div class="stat-item"><div class="number">{{about.stat1n}}</div><div class="label">{{about.stat1l}}</div></div>
+<div class="stat-item"><div class="number">{{about.stat2n}}</div><div class="label">{{about.stat2l}}</div></div>
+<div class="stat-item"><div class="number">{{about.stat3n}}</div><div class="label">{{about.stat3l}}</div></div>
+<div class="stat-item"><div class="number">{{about.stat4n}}</div><div class="label">{{about.stat4l}}</div></div>
 </div>
 </div>
 </div>
@@ -287,108 +287,108 @@ img{max-width:100%;height:auto;display:block}
 </section>
 <section class="services" id="services">
 <div class="container">
-<p class="section-subtitle fade-up">Service</p>
-<h2 class="section-title fade-up delay-100">服務項目</h2>
-<p class="section-desc fade-up delay-200">從產品供應到客製化服務，提供完整的環保解決方案</p>
+<p class="section-subtitle fade-up">{{services.eyebrow}}</p>
+<h2 class="section-title fade-up delay-100">{{services.title}}</h2>
+<p class="section-desc fade-up delay-200">{{services.desc}}</p>
 <div class="services-grid">
-<div class="service-card fade-up delay-100"><span class="number">01</span><span class="icon">🌱</span><h3>茂茂峰林成品代理</h3><p>宸廷綠色工程專業代理茂茂峰林國際的生物可分解產品，包含茶纖吸管、環保餐具、植纖日用品等，取代一次性塑膠產品。</p></div>
-<div class="service-card fade-up delay-200"><span class="number">02</span><span class="icon">♻️</span><h3>經營永續商品服務</h3><p>協助企業開發屬於自己的環境友善品牌，從設計、製造到生產，提供完整的 OEM/ODM 服務。</p></div>
-<div class="service-card fade-up delay-300"><span class="number">03</span><span class="icon">🔬</span><h3>生物可分解材料推廣</h3><p>提供完整的生物可分解/可堆肥樹脂複合材料資訊，帶您了解各種材料的特性與應用。</p></div>
+<div class="service-card fade-up delay-100"><span class="number">01</span><span class="icon">🌱</span><h3>{{service1.title}}</h3><p>{{service1.desc}}</p></div>
+<div class="service-card fade-up delay-200"><span class="number">02</span><span class="icon">♻️</span><h3>{{service2.title}}</h3><p>{{service2.desc}}</p></div>
+<div class="service-card fade-up delay-300"><span class="number">03</span><span class="icon">🔬</span><h3>{{service3.title}}</h3><p>{{service3.desc}}</p></div>
 </div>
 </div>
 </section>
 <section class="products" id="products">
 <div class="container">
-<p class="section-subtitle fade-up">Application</p>
-<h2 class="section-title fade-up delay-100">產品應用</h2>
-<p class="section-desc fade-up delay-200">多樣化的生物可分解產品，全面取代塑膠製品</p>
+<p class="section-subtitle fade-up">{{products.eyebrow}}</p>
+<h2 class="section-title fade-up delay-100">{{products.title}}</h2>
+<p class="section-desc fade-up delay-200">{{products.desc}}</p>
 <div class="products-grid">
-<div class="product-card fade-up delay-100"><div class="img-wrap"><span class="product-placeholder">🥤</span></div><div class="info"><h4>茶纖吸管</h4><p>採用天然茶纖維製成，可完全生物分解，不產生塑膠微粒。適合手搖飲、飲料店、餐飲業。</p></div></div>
-<div class="product-card fade-up delay-200"><div class="img-wrap"><span class="product-placeholder">🍽️</span></div><div class="info"><h4>環保餐具</h4><p>植物纖維複合材料製成的盤、碗、盒等，堅固耐用、可微波加熱，用後可完全生物分解。</p></div></div>
-<div class="product-card fade-up delay-300"><div class="img-wrap"><span class="product-placeholder">🧴</span></div><div class="info"><h4>植纖日用品</h4><p>從化妝品容器到生活雜貨，以植物纖維材料製成，讓生活更環保。</p></div></div>
-<div class="product-card fade-up delay-400"><div class="img-wrap"><span class="product-placeholder">📦</span></div><div class="info"><h4>客製化訂製</h4><p>提供完整的 OEM/ODM 服務，根據客戶需求開發專屬的生物可分解產品。</p></div></div>
+<div class="product-card fade-up delay-100"><div class="img-wrap"><span class="product-placeholder">🥤</span></div><div class="info"><h4>{{product1.title}}</h4><p>{{product1.desc}}</p></div></div>
+<div class="product-card fade-up delay-200"><div class="img-wrap"><span class="product-placeholder">🍽️</span></div><div class="info"><h4>{{product2.title}}</h4><p>{{product2.desc}}</p></div></div>
+<div class="product-card fade-up delay-300"><div class="img-wrap"><span class="product-placeholder">🧴</span></div><div class="info"><h4>{{product3.title}}</h4><p>{{product3.desc}}</p></div></div>
+<div class="product-card fade-up delay-400"><div class="img-wrap"><span class="product-placeholder">📦</span></div><div class="info"><h4>{{product4.title}}</h4><p>{{product4.desc}}</p></div></div>
 </div>
 </div>
 </section>
 <section class="env-section" id="env">
 <div class="container">
-<p class="section-subtitle fade-up">Environmental Issues</p>
-<h2 class="section-title fade-up delay-100">環保理念與現狀</h2>
-<p class="section-desc fade-up delay-200">了解塑膠危害，為地球做更好的選擇</p>
+<p class="section-subtitle fade-up">{{env.eyebrow}}</p>
+<h2 class="section-title fade-up delay-100">{{env.title}}</h2>
+<p class="section-desc fade-up delay-200">{{env.desc}}</p>
 <div class="env-grid">
-<div class="env-card fade-up"><div class="env-icon">🌊</div><h3>塑膠污染的嚴峻性</h3><p>全球每年約有 7,800 萬噸塑膠包裝材料產出，其中約 32% 排放至環境，2,500 萬噸流入海洋。傳統塑膠需要數百年才能分解。</p></div>
-<div class="env-card fade-up delay-200"><div class="env-icon">🌱</div><h3>生物可分解材料的優勢</h3><p>生物可分解材料在適當的堆肥環境下，可以完全分解回歸自然，不產生塑膠微粒，從天然植物纖維取材，實現循環經濟。</p></div>
-<div class="env-card fade-up delay-100"><div class="env-icon">⚠️</div><h3>市面標示生物可分解的區分</h3><p>市面上許多所謂生物可分解產品實際上是傳統塑膠加其他物質，僅能裂解成塑膠微粒，通不過國際可堆肥認證。茂茂峰林的材料屬於真正的生物可分解/可堆肥樹脂。</p></div>
-<div class="env-card fade-up delay-300"><div class="env-icon">🌍</div><h3>循環經濟與未來</h3><p>全球生物樹脂材料產能持續成長，顯示市場對環保材料的需求日益增加。選擇生物可分解材料，是為下一代留下更美好環境的承諾。</p></div>
+<div class="env-card fade-up"><div class="env-icon">🌊</div><h3>{{env1.title}}</h3><p>{{env1.desc}}</p></div>
+<div class="env-card fade-up delay-200"><div class="env-icon">🌱</div><h3>{{env2.title}}</h3><p>{{env2.desc}}</p></div>
+<div class="env-card fade-up delay-100"><div class="env-icon">⚠️</div><h3>{{env3.title}}</h3><p>{{env3.desc}}</p></div>
+<div class="env-card fade-up delay-300"><div class="env-icon">🌍</div><h3>{{env4.title}}</h3><p>{{env4.desc}}</p></div>
 </div>
 </div>
 </section>
 <section class="agent-section">
 <div class="container"><div class="fade-up">
-<p class="partner">✔ 官方授權代理</p>
-<h2>宸廷綠色工程 × 茂茂峰林國際</h2>
-<p>宸廷綠色工程有限公司為茂茂峰林國際股份有限公司的專業代理商，提供完整的生物可分解產品線。我們擁有專業的產品知識與服務能力，能為您提供最適合的環保解決方案。歡迎各種機構、企業、品牌商、通路商合作。</p>
+<p class="partner">{{agent.badge}}</p>
+<h2>{{agent.title}}</h2>
+<p>{{agent.desc}}</p>
 </div></div>
 </section>
 <section class="certification" id="cert">
 <section class="cert-hero">
 <div class="container fade-up">
-<p style="font-size:.9rem;letter-spacing:4px;text-transform:uppercase;opacity:.6;margin-bottom:.5rem">Certification</p>
-<h2>國際認證標章</h2>
-<p>茂茂峰林國際的產品通過多項國際權威機構檢測與認證</p>
+<p style="font-size:.9rem;letter-spacing:4px;text-transform:uppercase;opacity:.6;margin-bottom:.5rem">{{cert.eyebrow}}</p>
+<h2>{{cert.title}}</h2>
+<p>{{cert.desc}}</p>
 </div>
 </section>
 <section class="cert-badges">
 <div class="cert-badges-inner">
 <div class="cert-badge fade-up">
 <div class="badge-icon" style="font-size:1.8rem">SGS</div>
-<h3>SGS 檢驗認證</h3>
-<p class="badge-sub">國際權威檢測機構</p>
-<p class="badge-desc">SGS 為全球領先的檢驗、測試及認證機構，遍布全球 2,600 多個分支機構。茂茂峰林的產品通過 SGS 嚴格檢測，確保產品品質符合國際標準。</p>
-<span class="badge-tag">✓ 品質保證</span>
+<h3>{{cert1.title}}</h3>
+<p class="badge-sub">{{cert1.sub}}</p>
+<p class="badge-desc">{{cert1.desc}}</p>
+<span class="badge-tag">{{cert1.tag}}</span>
 </div>
 <div class="cert-badge fade-up delay-100">
 <div class="badge-icon" style="font-size:1.2rem">Intertek</div>
-<h3>Intertek 認證</h3>
-<p class="badge-sub">全球品質保證</p>
-<p class="badge-desc">Intertek 為全球領先的全面品質保證服務機構，提供測試、檢驗和認證服務。茂茂峰林的產品通過 Intertek 驗證，確保產品的安全性與環保效益。</p>
-<span class="badge-tag">✓ 環保認證</span>
+<h3>{{cert2.title}}</h3>
+<p class="badge-sub">{{cert2.sub}}</p>
+<p class="badge-desc">{{cert2.desc}}</p>
+<span class="badge-tag">{{cert2.tag}}</span>
 </div>
 <div class="cert-badge fade-up delay-200">
 <div class="badge-icon" style="font-size:1.5rem">β</div>
-<h3>Beta 生物基含量檢測</h3>
-<p class="badge-sub">美國實驗室認證</p>
-<p class="badge-desc">Beta Analytic 為美國權威實驗室，提供放射性碳定年法與生物基含量檢測。驗證產品中生物基含量，確保為真正的生物可分解材料。</p>
-<span class="badge-tag">✓ 生物基驗證</span>
+<h3>{{cert3.title}}</h3>
+<p class="badge-sub">{{cert3.sub}}</p>
+<p class="badge-desc">{{cert3.desc}}</p>
+<span class="badge-tag">{{cert3.tag}}</span>
 </div>
 </div>
-<div class="container"><p class="cert-note fade-up">產品符合國際可堆肥標準 EN 13432，並可配合歐盟包裝與包裝廢棄物法規（PPWR）及各國包裝法規，提供合規所需文件。</p></div>
+<div class="container"><p class="cert-note fade-up">{{marketNote}}</p></div>
 </section>
 <section class="cert-compare">
 <div class="container">
-<h2 class="fade-up">真正的生物可分解 vs 虛假標示</h2>
-<p class="sub fade-up delay-100">市面許多標示「生物可分解」的產品其實無法真正分解</p>
+<h2 class="fade-up">{{compare.title}}</h2>
+<p class="sub fade-up delay-100">{{compare.sub}}</p>
 <div class="compare-grid">
 <div class="compare-card fake fade-left">
-<h3>✕ 虛假生物可分解</h3>
+<h3>{{compare.fakeTitle}}</h3>
 <ul>
-<li><span class="mark">✕</span> 傳統塑膠 + 光敏促進劑 → 裂解成碎片</li>
-<li><span class="mark">✕</span> 傳統塑膠 + 玉米澱粉/碳酸鈣 → 裂解成微粒</li>
-<li><span class="mark">✕</span> 傳統塑膠 + 氧化添加劑 → 裂解成粉末</li>
-<li><span class="mark">✕</span> 無法通過國際可堆肥認證</li>
-<li><span class="mark">✕</span> 仍會產生塑膠微粒污染環境</li>
-<li><span class="mark">✕</span> 歐盟已禁用氧化降解塑膠</li>
+<li><span class="mark">✕</span> {{compare.fake1}}</li>
+<li><span class="mark">✕</span> {{compare.fake2}}</li>
+<li><span class="mark">✕</span> {{compare.fake3}}</li>
+<li><span class="mark">✕</span> {{compare.fake4}}</li>
+<li><span class="mark">✕</span> {{compare.fake5}}</li>
+<li><span class="mark">✕</span> {{compare.fake6}}</li>
 </ul>
 </div>
 <div class="compare-card real fade-right">
-<h3>✓ 真正生物可分解</h3>
+<h3>{{compare.realTitle}}</h3>
 <ul>
-<li><span class="mark">✓</span> 100% 植物纖維複合材料製成</li>
-<li><span class="mark">✓</span> 通過國際可堆肥認證標準（EN 13432）</li>
-<li><span class="mark">✓</span> 完全分解回歸自然</li>
-<li><span class="mark">✓</span> 不產生塑膠微粒</li>
-<li><span class="mark">✓</span> 通過 SGS / Intertek 檢驗</li>
-<li><span class="mark">✓</span> Beta 生物基含量檢測驗證</li>
+<li><span class="mark">✓</span> {{compare.real1}}</li>
+<li><span class="mark">✓</span> {{compare.real2}}</li>
+<li><span class="mark">✓</span> {{compare.real3}}</li>
+<li><span class="mark">✓</span> {{compare.real4}}</li>
+<li><span class="mark">✓</span> {{compare.real5}}</li>
+<li><span class="mark">✓</span> {{compare.real6}}</li>
 </ul>
 </div>
 </div>
@@ -396,76 +396,76 @@ img{max-width:100%;height:auto;display:block}
 </section>
 <section class="cert-detail">
 <div class="container">
-<h2 class="fade-up">認證細節說明</h2>
-<p class="sub fade-up delay-100">深入了解各項認證的檢驗標準與意義</p>
+<h2 class="fade-up">{{detail.title}}</h2>
+<p class="sub fade-up delay-100">{{detail.sub}}</p>
 <div class="detail-grid">
 <div class="detail-card fade-up">
 <span class="num">01</span>
 <span class="icon">📋</span>
-<h3>SGS 檢測項目</h3>
-<p>SGS 針對產品進行全方位的品質與安全檢測，包含材料成分分析、重金屬檢測、微生物檢測等，確保產品符合國際安全標準，對人體與環境無害。</p>
-<div class="info-row"><span class="lbl">檢測機構</span><span class="val">SGS Taiwan</span></div>
-<div class="info-row"><span class="lbl">檢測範圍</span><span class="val">成分/安全/環保</span></div>
+<h3>{{detail1.title}}</h3>
+<p>{{detail1.desc}}</p>
+<div class="info-row"><span class="lbl">{{detail1.r1l}}</span><span class="val">{{detail1.r1v}}</span></div>
+<div class="info-row"><span class="lbl">{{detail1.r2l}}</span><span class="val">{{detail1.r2v}}</span></div>
 </div>
 <div class="detail-card fade-up delay-100">
 <span class="num">02</span>
 <span class="icon">🏭</span>
-<h3>Intertek 驗證標準</h3>
-<p>Intertek 為產品提供全面的品質保證服務，驗證材料在生物分解性能、重金屬含量、食品接觸安全等方面符合國際標準，確保產品從原料到成品皆安全可靠。</p>
-<div class="info-row"><span class="lbl">驗證機構</span><span class="val">Intertek</span></div>
-<div class="info-row"><span class="lbl">驗證範圍</span><span class="val">分解性能/食品接觸</span></div>
+<h3>{{detail2.title}}</h3>
+<p>{{detail2.desc}}</p>
+<div class="info-row"><span class="lbl">{{detail2.r1l}}</span><span class="val">{{detail2.r1v}}</span></div>
+<div class="info-row"><span class="lbl">{{detail2.r2l}}</span><span class="val">{{detail2.r2v}}</span></div>
 </div>
 <div class="detail-card fade-up delay-200">
 <span class="num">03</span>
 <span class="icon">🔬</span>
-<h3>Beta 生物基含量檢測</h3>
-<p>使用 ASTM D6866 標準方法，透過放射性碳定年法檢測產品中的生物基含量。高生物基含量代表產品源自天然植物材料，而非石油基塑膠，是真正的環保材料。</p>
-<div class="info-row"><span class="lbl">檢測機構</span><span class="val">Beta Analytic 美國</span></div>
-<div class="info-row"><span class="lbl">檢測標準</span><span class="val">ASTM D6866</span></div>
+<h3>{{detail3.title}}</h3>
+<p>{{detail3.desc}}</p>
+<div class="info-row"><span class="lbl">{{detail3.r1l}}</span><span class="val">{{detail3.r1v}}</span></div>
+<div class="info-row"><span class="lbl">{{detail3.r2l}}</span><span class="val">{{detail3.r2v}}</span></div>
 </div>
 </div>
 </div>
 </section>
 <section class="cert-cta">
 <div class="container fade-up">
-<h2>安心選擇，有憑有據</h2>
-<p>宸廷綠色工程代理的茂茂峰林國際產品，所有材料均符合國際可堆肥標準，擁有完整檢測報告。歡迎與我們聯繫索取相關認證文件，讓我們用數據說話。</p>
+<h2>{{cta.title}}</h2>
+<p>{{cta.desc}}</p>
 </div>
 </section>
 </section>
 <section class="contact" id="contact">
 <div class="container">
-<p class="section-subtitle fade-up">Contact</p>
-<h2 class="section-title fade-up delay-100">聯絡宸廷綠色工程</h2>
-<p class="section-desc fade-up delay-200">歡迎與我們聯繫，了解更多生物可分解產品資訊</p>
+<p class="section-subtitle fade-up">{{contact.eyebrow}}</p>
+<h2 class="section-title fade-up delay-100">{{contact.title}}</h2>
+<p class="section-desc fade-up delay-200">{{contact.desc}}</p>
 <div class="contact-grid">
 <div class="contact-info fade-left">
-<p class="agent-label">宸廷綠色工程有限公司</p>
-<h3>茂茂峰林國際 專業代理</h3>
-<div class="info-item"><span class="icon">📞</span> 電話: 03-4823837</div>
-<div class="info-item"><span class="icon">📧</span> 郵件: service@chanting-green.com</div>
-<div class="info-item"><span class="icon">💬</span> LINE OA: @chanting</div>
-<div class="info-item"><span class="icon">📋</span> 統編: 93554455</div>
+<p class="agent-label">{{contact.agent}}</p>
+<h3>{{contact.subtitle}}</h3>
+<div class="info-item"><span class="icon">📞</span> {{contact.phoneL}} {{contact.phoneV}}</div>
+<div class="info-item"><span class="icon">📧</span> {{contact.emailL}} {{contact.emailV}}</div>
+<div class="info-item"><span class="icon">💬</span> {{contact.lineL}} {{contact.lineV}}</div>
+<div class="info-item"><span class="icon">📋</span> {{contact.taxL}} {{contact.taxV}}</div>
 <div class="divider"></div>
-<p style="color:#888;font-size:.88rem;line-height:1.8;">我們專業代理茂茂峰林國際的生物可分解產品，<br>歡迎品牌商、製造商、通路商洽談合作。</p>
+<p style="color:#888;font-size:.88rem;line-height:1.8;">{{contact.note1}}<br>{{contact.note2}}</p>
 </div>
 <form class="contact-form fade-right" id="contactForm">
-<div class="form-group"><input type="text" placeholder="您的姓名" required></div>
-<div class="form-group"><input type="email" placeholder="電子郵件" required></div>
-<div class="form-group"><input type="text" placeholder="聯絡電話"></div>
-<div class="form-group"><textarea placeholder="請輸入您對產品的問題或需求，我們將盡快與您聯繫"></textarea></div>
-<div class="form-group"><button type="button" class="submit-btn" onclick="alert('感謝您的訊息，宸廷綠色工程將盡快與您聯繫！')">送出訊息</button></div>
+<div class="form-group"><input type="text" placeholder="{{form.name}}" required></div>
+<div class="form-group"><input type="email" placeholder="{{form.email}}" required></div>
+<div class="form-group"><input type="text" placeholder="{{form.phone}}"></div>
+<div class="form-group"><textarea placeholder="{{form.message}}"></textarea></div>
+<div class="form-group"><button type="button" class="submit-btn" onclick="alert('{{form.alert}}')">{{form.submit}}</button></div>
 </form>
 </div>
 </div>
 </section>
 <footer class="footer">
 <div class="container">
-<p class="brand">宸廷綠色工程有限公司 Chanting Green Engineering Co., Ltd.</p>
-<p>專業代理茂茂峰林國際生物可分解產品</p>
-<p>電話: 03-4823837 | 郵件: service@chanting-green.com | LINE: @chanting</p>
-<p class="small">統編: 93554455 | <a href="https://chanting-green.com/" target="_blank">chanting-green.com</a></p>
-<p class="small">© 2026 宸廷綠色工程有限公司 All Rights Reserved. | <a href="https://chanting-green.com/" target="_blank" style="color:#85c1e9">返回主站</a></p>
+<p class="brand">{{footer.brand}}</p>
+<p>{{footer.tagline}}</p>
+<p>{{footer.contact}}</p>
+<p class="small">{{footer.tax}} | <a href="https://chanting-green.com/" target="_blank">chanting-green.com</a></p>
+<p class="small">{{footer.copyrightLine}} | <a href="https://chanting-green.com/" target="_blank" style="color:#85c1e9">{{footer.back}}</a></p>
 </div>
 </footer>
 <script>
